@@ -20,9 +20,11 @@ The contents presented here are part of a contribution presented as a paper at *
 
 The following are included in this repository:
 
-  - A simulated environment for training a learner model on a follow-the-cursor task.
-  - 4 trained model files describing 4 virtual teachers, each trained with different teacher-learner connection settings. Those can be found under the 
-directory `trained_teacher_models/`.
+  - `trained_teacher_models/`: 4 trained model files describing 4 virtual teachers, each trained with different teacher-learner connection settings.
+  - `environment.py`: A virtual environment for training a learner model on a follow-the-cursor task.
+  - `t_sim_environment.py`: Simulated environment created for technical reasons of running two agents (teacher and learner) simultaneously. Can be ignored 
+by the user.
+  - `main.py`: Main running file to train a virtual learner, with full description of parameters and their meaning.
 
 
 ## Getting Started
