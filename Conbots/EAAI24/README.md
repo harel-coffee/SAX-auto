@@ -51,3 +51,6 @@ In order to use the repository, you should create a virtualenv or conda environm
     stable-baselines3=1.3.0
 
 We recommend using **python 3.6**, as it is based on an older stable-baselines version which included gail. the code will not work for **python 2.7**.
+
+## How to cite
+Mulian, H., Shlomov, S., Limonad, L., Noccaro, A., & Buscaglione, S. (2024). [Mimicking the Maestro](https://doi.org/10.1609/aaai.v38i21.30369): Exploring the Efficacy of a Virtual AI Teacher in Fine Motor Skill Acquisition. Proceedings of the AAAI Conference on Artificial Intelligence, 38(21), 23224-23231. 
