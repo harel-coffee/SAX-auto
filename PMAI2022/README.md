@@ -37,4 +37,5 @@
 ​
 ​
 ## How to cite
-Please consider citing our paper if you use code or ideas from this project:
+Please consider citing [our paper](https://ceur-ws.org/Vol-3310/paper1.pdf) if you use code or ideas from this project:\
+Amit, G., Fournier, F., Gur, S., & Limonad, L. (2022). Model-informed LIME Extension for Business Process Explainability. Process Management in the AI Era 2022 at IJCAI, CEUR Workshop Proceedings, 3310, 1–12.
