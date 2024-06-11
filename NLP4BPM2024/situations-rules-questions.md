@@ -94,7 +94,7 @@
 
 #### Combined:
 * QPC1: Does B cause the execution of C? A: No (because we don’t know according to close world assumption)
-* QPC2: Does C cause the execution of B? A: No (because we don’t know, and $B\rightarrow C$ implies $\lnot (C\xrightarrow{C}B)$)
+* QPC2: Does C cause the execution of B? A: No (because we don’t know, and $B\rightarrow C$ implies $\lnot(C\xrightarrow{C}B) $)
 
 ## Situation 3: Collider with no discrepancy
 C: A>C; B>C
