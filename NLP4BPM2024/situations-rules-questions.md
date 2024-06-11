@@ -109,10 +109,16 @@
 
 ### Rules $\mathcal{R}_3$
 Same as in $\mathcal{R}_1$ and $\mathcal{R}_2$.
+#### Combined: (possible extension if we add $||$ support in process)
+* PCR1: $A||B: A>>C, B>>C, (A>C or B>C)$ [added if we extend to support || in the process, forces a AND-join similar to forcing AND-split in the confounder case for the non discrepancy cases]
+>* If we know that both A>C and B>C, it may imply that A||B on the process side.
+>* If say only A>C and not B>C, it would still require that A||B, otherwise B>>C becomes blocked if A doesn’t execute (being the cause for C).
+>* Similarly, if say only B>C and not A>C, it implies A||B, otherwise A>>C becomes blocked.
+>* Finally, an XOR-join is only possible if neither A or B cause C (unless A>C implies causes sometimes which we don’t consider at this stage). 
 
 ### Questions $\mathcal{Q}_3$
 #### Process:
-* QP1: Does A occur before B? A. No. (provided close world assumption, may be different if we also know that A#B or that A||B when using more expressive process notation, distinguishing between XOR-join and AND-join).
+* QP1: Does A occur before B? A. No. (provided close world assumption, may be different if we also know that $A$# $B$ or that $A||B$ when using more expressive process notation, distinguishing between XOR-join and AND-join).
 * QP2: Does B occur before A? A. No (Similarly in the opposite direction, same argumentation).
 
 #### Causal:
@@ -121,13 +127,9 @@ Same as in $\mathcal{R}_1$ and $\mathcal{R}_2$.
 
 
 
-Process and causal reasoning: 
+Process and causal reasoning (combined): 
 
-PCR1: A||B: A>>C, B>>C, (A>C or B>C) [added if we extend to support || in the process, forces a AND-join similar to forcing AND-split in the confounder case for the non discrepancy cases]
 
-I think that if we know the both A>C and B>C, it may imply that A||B on the process side. If say only A>C and not B>C, it would still require that A||B, otherwise B>>C becomes blocked if A doesn’t execute (being the cause for C).
-
-Similarly, if say only B>C and not A>C, it implies A||B, otherwise A>>C becomes blocked. Finally, an XOR-join is only possible if neither A or B cause C (unless A>C implies causes sometimes which we don’t consider at this stage). 
 
 Q: Does A always occur before B? A. No. (PCR1)
 
