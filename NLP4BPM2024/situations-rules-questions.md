@@ -110,7 +110,7 @@
 ### Rules $\mathcal{R}_3$
 Same as in $\mathcal{R}_1$ and $\mathcal{R}_2$.
 #### Combined: (possible extension if we add $||$ support in process)
-* PCR1: $A||B: A>>C, B>>C, (A>C or B>C)$ [added if we extend to support || in the process, forces a AND-join similar to forcing AND-split in the confounder case for the non discrepancy cases]
+* PCR1: $A||B \Leftarrow (A\rightarrow C) \land (B\rightarrow C) \land ((A\xrightarrow{C}C) \lor (B\xrightarrow{C}C))$ [added if we extend to support || in the process, forces a AND-join similar to forcing AND-split in the confounder case for the non discrepancy cases]
 >* If we know that both A>C and B>C, it may imply that A||B on the process side.
 >* If say only A>C and not B>C, it would still require that A||B, otherwise B>>C becomes blocked if A doesn’t execute (being the cause for C).
 >* Similarly, if say only B>C and not A>C, it implies A||B, otherwise A>>C becomes blocked.
@@ -123,19 +123,10 @@ Same as in $\mathcal{R}_1$ and $\mathcal{R}_2$.
 
 #### Causal:
 
-#### Combined:
-
-
-
-Process and causal reasoning (combined): 
-
-
-
-Q: Does A always occur before B? A. No. (PCR1)
-
-Q: Does B always occur before A? A. No. (PCR1)
-
-Q: Does A and B occur in parallel? A. Yes. (PCR1)
+#### Combined: (w.r.t possible extension if we add $||$ support in process)
+* QPC1: Does A always occur before B? A. No. (PCR1)
+* QPC2: Does B always occur before A? A. No. (PCR1)
+* QPC3: Does A and B occur in parallel? A. Yes. (PCR1)
 
 ## Situation 4: Collider with discrepancy
 * P: A>B>C (or B>A>C)
