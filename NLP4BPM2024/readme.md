@@ -6,5 +6,5 @@ The core of the benchmark consists of a composition of a set of BP<sup>C</sup>-r
 Reasoning on BP<sup>C</sup> is of crucial importance for process interventions and process improvement. Our benchmark could be used in one of two possible modalities: testing the performance of any target LLM and training an LLM to advance its capability to reason about BP<sup>C</sup>. 
 
 ## How to cite
-Please consider citing [our paper](https://) if you use code or ideas from this project:\
-...
+Please consider citing [our paper]([https://](https://arxiv.org/abs/2406.05506)) if you use code or ideas from this project:\
+Fabiana Fournier and Lior Limonad and Inna Skarbovsky, Towards a Benchmark for Causal Business Process Reasoning with LLMs, arXiv, 2406.05506, 2024.
