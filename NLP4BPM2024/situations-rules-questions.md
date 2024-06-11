@@ -108,38 +108,18 @@
 * A causes the execution of C. B causes the execution of C.
 
 ### Rules $\mathcal{R}_3$
-Same as in \mathcal{R}_1 and \mathcal{R}_2.
+Same as in $\mathcal{R}_1$ and $\mathcal{R}_2$.
 
 ### Questions $\mathcal{Q}_3$
 #### Process:
+* QP1: Does A occur before B? A. No. (provided close world assumption, may be different if we also know that A#B or that A||B when using more expressive process notation, distinguishing between XOR-join and AND-join).
+* QP2: Does B occur before A? A. No (Similarly in the opposite direction, same argumentation).
 
 #### Causal:
 
 #### Combined:
 
-patterns unfolding from non discrepancy (collider):
 
-No Discrepancy: (collider)
-
-Process: A>>C; B>>C  (join)
-
-Causal: A>C; B>C
-
-Phrase templates (knowledge facts reflective of the above discrepancy pattern): 
-
-A, B, and C are activities in some process.
-
-A occurs before C. B occurs before C.
-
-A causes the execution of C. B causes the execution of C.
-
-Process reasoning (temporal): 
-
-QP1: Does A occur before B? A. No. (provided close world assumption, may be different if we also know that A#B or that A||B distinguishing between XOR-join and AND-join).
-
-Similarly in the opposite direction:
-
-QP2: Does B occur before A? A. No (same argumentation).
 
 Process and causal reasoning: 
 
