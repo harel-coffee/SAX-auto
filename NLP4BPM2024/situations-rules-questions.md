@@ -97,16 +97,23 @@
 * QPC2: Does C cause the execution of B? A: No (because we don’t know, and $B\rightarrow C$ implies $\lnot(C\xrightarrow{C}B) $)
 
 ## Situation 3: Collider with no discrepancy
-C: A>C; B>C
-P: A>C; B>C (join)
+* Process: $A\rightarrow C, B\rightarrow C$ (join)
+* Causal: $A\xrightarrow{C}C, B\xrightarrow{C}C$
+
+### Situation Phrases $\mathcal{S}_3$
+* A, B, and C are activities in some process.
+#### Process: 
+* A occurs before C. B occurs before C.
+#### Causal: 
+* A causes the execution of C. B causes the execution of C.
 
 ## Situation 4: Collider with discrepancy
-C: A>C; B>C
-P: A>B>C (or B>A>C)
+* P: A>B>C (or B>A>C)
+* C: A>C; B>C
 
 ## Situation 5: Mediator
-C: A>B; B>C
-P: A>B; B>C
+* P: A>B; B>C
+* C: A>B; B>C
 
 # Work in progress
 
