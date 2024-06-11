@@ -107,6 +107,20 @@
 #### Causal: 
 * A causes the execution of C. B causes the execution of C.
 
+### Rules $\mathcal{R}_3$
+#### Process:
+
+#### Causal:
+
+#### Combined:
+
+### Questions $\mathcal{Q}_3$
+#### Process:
+
+#### Causal:
+
+#### Combined:
+
 ## Situation 4: Collider with discrepancy
 * P: A>B>C (or B>A>C)
 * C: A>C; B>C
