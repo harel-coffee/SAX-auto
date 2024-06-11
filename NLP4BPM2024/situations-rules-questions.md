@@ -85,16 +85,16 @@
 * QP7: Does B occur after C? A: No (deduced from PR3 since (C occurs before B) = FALSE deduced from PR2 )
 
 #### Causal:
-* QC1: Does A cause the execution of C? A: No (CR1)
-* QC2: Does B cause the execution of C? A: No (CR1)
-* QC3: Does A execute because of C? A: Yes (CR3)
-* QC4: Does B execute because of C? A: Yes (CR3)
-* QC5: If C doesn’t execute, will A ever execute? A: No (CR4)
-* QC6: If C doesn’t execute, will B ever execute? A: No (CR4)
+* QC1: Does B cause the execution of A? A: No (CR1)
+* QC2: Does C cause the execution of A? A: No (CR1)
+* QC3: Does B execute because of A? A: Yes (CR3)
+* QC4: Does C execute because of A? A: Yes (CR3)
+* QC5: If A doesn’t execute, will B ever execute? A: No (CR4)
+* QC6: If A doesn’t execute, will C ever execute? A: No (CR4)
 
 #### Combined:
-* QPC1: Does A cause the execution of B? A: No (because we don’t know according to close world assumption)
-* QPC2: Does B cause the execution of A? A: No (because we don’t know, and A>>B implies not B>A)
+* QPC1: Does B cause the execution of C? A: No (because we don’t know according to close world assumption)
+* QPC2: Does C cause the execution of B? A: No (because we don’t know, and $B\rightarrow C$ implies $\lnot (C\xrightarrow{C}B)$)
 
 ## Situation 3: Collider with no discrepancy
 C: A>C; B>C
