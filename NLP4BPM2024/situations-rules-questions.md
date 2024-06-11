@@ -65,10 +65,10 @@
 * PR5: $B \Leftarrow (A\rightarrow B) \land A$ (entailed from the meaning of $\rightarrow$)
 
 #### Causal: 
-* CR1: not a>c: c>a (no symmetry inference)
-* CR2: a>c: a>b, b>c (transitive inference) [relevant only in the mediator pattern]
-* CR3: a<b: b>a (cause vs because) 
-* CR4: not b: a>b, not a [similarly a: a>b, b]
+* CR1: $\lnot (A\xrightarrow{C}C) \Leftarrow C\xrightarrow{C}A$ (no symmetry inference)
+* CR2: $A\xrightarrow{C}C \Leftarrow (A\xrightarrow{C}B) \land (B\xrightarrow{C}C)$ (transitive inference) [relevant only in the mediator pattern]
+* CR3: $A\xleftarrow{C}B \Leftarrow B\xrightarrow{C}A$ (cause vs because as $\xleftarrow{C}$) 
+* CR4: $\lnot B \Leftarrow (A\xrightarrow{C}B) \land \lnot A$ [similarly $A \Leftarrow (A\xrightarrow{C}B) \land B$](entailed from the meaning of $\xrightarrow{C}$)
 
 #### Combined:
 * PCR1: a>>b: a>b (i.e., IF (a causes b)=TRUE THEN (a precedes b)=TRUE)
