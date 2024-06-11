@@ -71,8 +71,8 @@
 * CR4: $\lnot B \Leftarrow (A\xrightarrow{C}B) \land \lnot A$ [similarly $A \Leftarrow (A\xrightarrow{C}B) \land B$](entailed from the meaning of $\xrightarrow{C}$)
 
 #### Combined:
-* PCR1: a>>b: a>b (i.e., IF (a causes b)=TRUE THEN (a precedes b)=TRUE)
-* PCR2: not b>a: a>>b (i.e., IF (a precedes b)=TRUE THEN (b causes a)=FALSE)
+* PCR1: $A\rightarrow B \Leftarrow A\xrightarrow{C}B$ (i.e., IF (A causes B)=TRUE THEN (A precedes B)=TRUE)
+* PCR2: $\lnot (B\xrightarrow{C}A) \Leftarrow A\rightarrow B$ (i.e., IF (A precedes B)=TRUE THEN (B causes A)=FALSE)
 
 ### Questions $\mathcal{Q}_2$
 #### Process:
