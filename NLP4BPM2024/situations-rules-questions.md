@@ -117,133 +117,6 @@ Same as in \mathcal{R}_1 and \mathcal{R}_2.
 
 #### Combined:
 
-## Situation 4: Collider with discrepancy
-* P: A>B>C (or B>A>C)
-* C: A>C; B>C
-
-## Situation 5: Mediator
-* P: A>B; B>C
-* C: A>B; B>C
-
-# Work in progress
-
-## Situation 2
-Additional rules not manifested in the process perspective:
-PR: a >>> b: exists c such that a>>>c, c>>b [***no manifestation in this pattern]
-PR: a#b: not a>>b, not b>>a [***no manifestation in this pattern]
-PR: a||b: a>>b, b>>a [***no manifestation in this pattern]
-
-Additional possible questions for wider coverages of process perspective for situation 2: [not in paper]
-
-Q: Does C occur before A? A: Yes. (obvious to test the stated)
-Q: Does A occur before B? A: Yes. (obvious as stated)
-Q: Does A occur before C? A: No. (PR2)
-Q: Does B occur before A? A: No. (PR2)
-Q: Does B occur after A? A: Yes. (PR3)
-Q: Does A occur after C? A: Yes. (PR3)
-Q: Does C occur before B? A: Yes (PR1)
-Q: Does C occur before C? A: No (missing)
-
-Causal rule extension and corresponding questions:
-* CR5: shorten(b): a>b, shorten(a)
-
-* QC7: If we shorten(A), will shorten(B) hold? A: No (same for extend)
-* QC8: If we shorten(B), will shorten(A) hold? A: No (same for extend)
-* QC9: If we shorten(C), will shorten(A) hold? A: Yes (same for extend)
-* QC10: If we shorten(C), will shorten(B) hold? A: Yes (same for extend)
-
-
-
-Extending the templates for “complete” (pattern-relative) coverage (we only add aspects specificto the different :
-
-patterns unfolding from non-discrepancy (confounder):
-
-No Discrepancy: (confounder)
-
-Process: C>>A; C>>B (split) 
-
-Causal: C>A; C>B
-
-Phrase templates (knowledge facts reflective of the above pattern): 
-
-A, B, and C are activities in some process.
-
-C occurs before A. C occurs before B.
-
-C causes the execution of A. C causes the execution of B.
-
-Process reasoning (temporal): 
-
-We anticipate (process related inference rules):
-
-PR1: a>>>c: a>>b, b>>c (transitive inference) - i.e., IF (a before b)=TRUE AND (b before c)=TRUE THEN (a before c)=TRUE
-
-PR2: not b>>a: a>>b (no symmetry inference) [relate to DAG and k-unfolding]
-
-PR3: a<<b: b>>a (antonym precedence negation inference)
-
-PR4: a>>a (no reflexivity) [no repetitions]
-
-In more expressive process forms that also have || (parralelism):a||b: c>>a, c>>b,not a>>b,not b>>a [To verify. but in our case, not considered)
-
-Process: C>>A; C>>B (split) 
-
-Questions:
-
-QP1: Does A occur before B? A: No (deduced from close world assumption)
-
-QP2: Does B occur before A? A: No (same as Q1)
-
-QP3: Does A occur after B? A: No (PR3 + close world assumption)
-
-QP4: Does B occur after A? A: No (PR3 + close world assumption)
-
-Lior: I think other questions may be redundant.
-
-Causal process reasoning:
-
-With respect to the causal rules, since the pattern is the same for causal, so no additional questions here.
-
-Combined process and causal reasoning:
-
-Lior: I can’t think of anything that could be added here.
-
-patterns unfolding from discrepancy (collider):
-
-Discrepancy: (collider)
-
-Process: A>>B>>C  (or B>>A>>C)
-
-Causal: A>C; B>C 
-
-Phrase templates (knowledge facts reflective of the above discrepancy pattern): 
-
-A, B, and C are activities in some process.
-
-A occurs before B. B occurs before C.
-
-A causes the execution of C. B causes the execution of C.
-
-Process reasoning (temporal): 
-
-The same as in the discrepency case for a confounder.
-
-Causal process reasoning: 
-
-w.r.t. CR4: not b: a>b, not a, here also, it may be interesting
-
-QC1: If A doesn’t execute, will C ever execute? A: No (CR4)
-
-QC2: If B doesn’t execute, will C ever execute? A: No (CR4)
-
-Combined process and causal process reasoning:
-
-Since A>>B, such a relation may be deceiving, hence motovating two questions:
-
-QCP1: Does A cause the execution of B? A: No (close world assumption)
-
-QCP2: Does B cause the execution of A? A: No (both close world and also entailment from A>>B)
-
 patterns unfolding from non discrepancy (collider):
 
 No Discrepancy: (collider)
@@ -281,6 +154,50 @@ Q: Does A always occur before B? A. No. (PCR1)
 Q: Does B always occur before A? A. No. (PCR1)
 
 Q: Does A and B occur in parallel? A. Yes. (PCR1)
+
+## Situation 4: Collider with discrepancy
+* P: A>B>C (or B>A>C)
+* C: A>C; B>C
+
+patterns unfolding from discrepancy (collider):
+
+Discrepancy: (collider)
+
+Process: A>>B>>C  (or B>>A>>C)
+
+Causal: A>C; B>C 
+
+Phrase templates (knowledge facts reflective of the above discrepancy pattern): 
+
+A, B, and C are activities in some process.
+
+A occurs before B. B occurs before C.
+
+A causes the execution of C. B causes the execution of C.
+
+Process reasoning (temporal): 
+
+The same as in the discrepency case for a confounder.
+
+Causal process reasoning: 
+
+w.r.t. CR4: not b: a>b, not a, here also, it may be interesting
+
+QC1: If A doesn’t execute, will C ever execute? A: No (CR4)
+
+QC2: If B doesn’t execute, will C ever execute? A: No (CR4)
+
+Combined process and causal process reasoning:
+
+Since A>>B, such a relation may be deceiving, hence motovating two questions:
+
+QCP1: Does A cause the execution of B? A: No (close world assumption)
+
+QCP2: Does B cause the execution of A? A: No (both close world and also entailment from A>>B)
+
+## Situation 5: Mediator
+* P: A>B; B>C
+* C: A>B; B>C
 
 patterns unfolding from discrepancy (mediator): 
 
@@ -332,17 +249,29 @@ process and causal reasoning:
 
 Nothing added.
 
-LLM as a judge for faithfulness assessment (see below evaluation):
+# Work in progress
 
-Template question: If we shorten C, will B be shortened? 
+## Situation 2
+Additional rules not manifested in the process perspective:
+PR: a >>> b: exists c such that a>>>c, c>>b [***no manifestation in this pattern]
+PR: a#b: not a>>b, not b>>a [***no manifestation in this pattern]
+PR: a||b: a>>b, b>>a [***no manifestation in this pattern]
 
-Instantiated question: If we shorten Damage assessment team inspects the damage and estimates the cost of repair in duration, will Insurance policyholder receives the payout be shortened? 
+Additional possible questions for wider coverages of process perspective for situation 2: [not in paper]
 
-Considering the instantiated question above a concrete version of the template question where the letters are replaced with process activity descriptions, when replacing these descriptions with their corresponding letters in the template, how would you rate the similarity between the revised instantiated question and the template question (where a 1 rate means they are identical and 0 they are completely different)? In your output, print only the rate value on a 0-1 scale.
+Q: Does C occur before A? A: Yes. (obvious to test the stated)
+Q: Does A occur before B? A: Yes. (obvious as stated)
+Q: Does A occur before C? A: No. (PR2)
+Q: Does B occur before A? A: No. (PR2)
+Q: Does B occur after A? A: Yes. (PR3)
+Q: Does A occur after C? A: Yes. (PR3)
+Q: Does C occur before B? A: Yes (PR1)
+Q: Does C occur before C? A: No (missing)
 
-OUTPUT (Mixtral):
+Causal rule extension and corresponding questions:
+* CR5: shorten(b): a>b, shorten(a)
 
-0.9 or 90% similarity.
-
-
-
+* QC7: If we shorten(A), will shorten(B) hold? A: No (same for extend)
+* QC8: If we shorten(B), will shorten(A) hold? A: No (same for extend)
+* QC9: If we shorten(C), will shorten(A) hold? A: Yes (same for extend)
+* QC10: If we shorten(C), will shorten(B) hold? A: Yes (same for extend)
