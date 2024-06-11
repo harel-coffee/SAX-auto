@@ -1,245 +1,142 @@
-Overall BP^^C^^ domain as a combination of three underlying causal patterns and the corresponding viable process structures:
+# Overall BP<sup>C</sup> domain as a combination of three underlying causal patterns and the corresponding viable process structures:
 
-# Situation 1: Confounder with no discrepancy
-C: A>B; A>C
-P: A>B; A>C (split)
+## Assumptions: 
 
-## Rules
+* $A = True$ means that A executed and $A = False$ means that A did not execute.
+* $\rightarrow$ denotes <i>occurs before</i> which means that given $A\rightarrow B$, for any process execution in which both $A$ and $B$ execute, the execution of $A$ occurs before the execution of $B$.
+* $\xrightarrow{C}$ denotes <i>causal-execution-dependence</i> which means that given $A\xrightarrow{C}B$, if $A$ executes, $B$ will necessarily execute sometime later. ***Note: “always” causes.*** 
+* **Close world assumption.** For any premise $p$, if $p$ is not in explicitly articulated in the situation phrases $\mathcal{S}$ then $p=False$.
 
-## Questions
+## Situation 1: Confounder with no discrepancy
 
-# Situation 2: Confouder with discrepancy
-C: A>B; A>C
-P: A>B>C (or A>C>B)
+* Process: $C\rightarrow A$, $C\rightarrow B$ (split)
+* Causal: $C\xrightarrow{C}A$, $C\xrightarrow{C}B$
 
-# Situation 3: Collider with no discrepancy
+### Situation Phrases $\mathcal{S}_1$
+* A, B, and C are activities in some process.
+#### Process: 
+* C occurs before A. C occurs before B.
+#### Causal: 
+* C causes the execution of A. C causes the execution of B.
+
+### Rules $\mathcal{R}_1$
+#### Process:
+* PR1: $A\rightarrow C \Leftarrow (A\rightarrow B) \land (B\rightarrow C)$ (transitive inference) - i.e., IF (a before b)=TRUE AND (b before c)=TRUE THEN (a before c)=TRUE
+* PR2: $\lnot (B\rightarrow A) \Leftarrow A\rightarrow B$ (no symmetry inference) [relate to DAG and k-unfolding]
+* PR3: $A\leftarrow B \Leftarrow B\rightarrow A$ (antonym precedence negation inference)
+* PR4: $A\not\rightarrow A$ (no reflexivity) [no repetitions]
+
+#### Causal: 
+* No additional rules.
+
+#### Combined:
+* No additional rules.
+
+### Questions $\mathcal{Q}_1$
+#### Process:
+* QP1: Does A occur before B? A: No (deduced from close world assumption)
+* QP2: Does B occur before A? A: No (same as Q1)
+* QP3: Does A occur after B? A: No (PR3 + close world assumption)
+* QP4: Does B occur after A? A: No (PR3 + close world assumption)
+
+#### Causal:
+* Since the pattern is the same for causal as in situation #2, no additional questions here (see situation #2).
+
+#### Combined:
+* None.
+
+## Situation 2: Confouder with discrepancy
+* Process: $A\rightarrow B\rightarrow C$ (or $A\rightarrow C\rightarrow B$)
+* Causal: $A\xrightarrow{C}B, A\xrightarrow{C}C$
+
+### Situation Phrases $\mathcal{S}_2$
+* A, B, and C are activities in some process.
+#### Process: 
+* A occurs before B. B occurs before C.
+#### Causal: 
+* A causes the execution of B. A causes the execution of C.
+
+### Rules $\mathcal{R}_2$
+#### Process:
+* PR1: $A\rightarrow C \Leftarrow (A\rightarrow B) \land (B\rightarrow C)$ (transitive inference)
+* PR2: $\lnot (B\rightarrow A) \Leftarrow A\rightarrow B$ (no symmetry inference) [relate to DAG and k-unfolding]
+* PR3: $A\leftarrow B \Leftarrow B\rightarrow A$ (antonym precedence negation inference)
+* PR4: $A\not\rightarrow A$ (no reflexivity) [no repetitions]
+* PR5: $B \Leftarrow (A\rightarrow B) \land A$ (entailed from the meaning of $\rightarrow$)
+
+#### Causal: 
+* CR1: not a>c: c>a (no symmetry inference)
+* CR2: a>c: a>b, b>c (transitive inference) [relevant only in the mediator pattern]
+* CR3: a<b: b>a (cause vs because) 
+* CR4: not b: a>b, not a [similarly a: a>b, b]
+
+#### Combined:
+* PCR1: a>>b: a>b (i.e., IF (a causes b)=TRUE THEN (a precedes b)=TRUE)
+* PCR2: not b>a: a>>b (i.e., IF (a precedes b)=TRUE THEN (b causes a)=FALSE)
+
+### Questions $\mathcal{Q}_2$
+#### Process:
+* QP1: Does A occur before C? A: Yes (deduced from PR1)
+* QP2: Does C occur before A? A: No (deduced from PR2 deduced from (A occurs before C) = TRUE in Q1)
+* QP3: Does B occur after A? A: Yes (deduced from PR3 deduced from (A occurs before B) = TRUE in phrase )
+* QP4: Does C occur after A? A: Yes (deduced from PR3 deduced from (A occurs before C) = TRUE in Q1)
+* QP5: Does A occur after B? A: No (deduced from PR2 since (A occurs before B) = TRUE in phrase )
+* QP6: Does A occur after C? A: No (deduced from PR2 since (A occurs before C) = TRUE in Q1)
+* QP7: Does B occur after C? A: No (deduced from PR3 since (C occurs before B) = FALSE deduced from PR2 )
+
+#### Causal:
+* QC1: Does A cause the execution of C? A: No (CR1)
+* QC2: Does B cause the execution of C? A: No (CR1)
+* QC3: Does A execute because of C? A: Yes (CR3)
+* QC4: Does B execute because of C? A: Yes (CR3)
+* QC5: If C doesn’t execute, will A ever execute? A: No (CR4)
+* QC6: If C doesn’t execute, will B ever execute? A: No (CR4)
+
+#### Combined:
+* QPC1: Does A cause the execution of B? A: No (because we don’t know according to close world assumption)
+* QPC2: Does B cause the execution of A? A: No (because we don’t know, and A>>B implies not B>A)
+
+## Situation 3: Collider with no discrepancy
 C: A>C; B>C
 P: A>C; B>C (join)
 
-# Situation 4: Collider with discrepancy
+## Situation 4: Collider with discrepancy
 C: A>C; B>C
 P: A>B>C (or B>A>C)
 
-# Situation 5: Mediator
+## Situation 5: Mediator
 C: A>B; B>C
 P: A>B; B>C
- 
 
+# Work in progress
 
+## Situation 2
+Additional rules not manifested in the process perspective:
+PR: a >>> b: exists c such that a>>>c, c>>b [***no manifestation in this pattern]
+PR: a#b: not a>>b, not b>>a [***no manifestation in this pattern]
+PR: a||b: a>>b, b>>a [***no manifestation in this pattern]
 
- 
-
-
-
- 
-
-
-
-Assumption of description is condition completeness.
-
- 
-
-C: A>B
-
-P: A>B
-
- 
-
-C: not A>B
-
-P: A>B (or B>A)
-
- # אן
-
-patterns unfolding from discrepancies (confounder):
-
-Discrepancy 1: (confounder)
-
-Process: C>>A>>B (or C>>B>>A)
-
-Causal: C>A; C>B
-
-%%%%%%%
-
-Process: C>>A; C>>B
-
-Causal: C>A;  
-
-R: A||B: C>>A, C>>B, C>A, C>B
-
-R: A||B: C>>A, C>>B, C>A
-
-%%%%%%%
-
-Assumptions: 
-
-[b = true means that b was executed and b = false means that b was not executed.]
-
-(1) >> denotes directly-follows which means that given a>>b, for any process execution in which both a and b execute, the execution of b occurs after the execution of a, with no other activity occurring in between. [in the paper we relaxed » to “followed by”/”occurs before”]
-
-(2) > denotes causal-execution-dependence which means that given a>b, if a executes, b will necessarily execute sometime later. ***Lior: I think we need to say that currently we refer to > as “always” causes. 
-
-(3) Close world assumption. For any premise p in the rules, if p is not in P(hrase) then p=False.
-
-Phrase templates (knowledge facts reflective of the above discrepancy pattern): 
-
-A, B, and C are activities in some process.
-
-C occurs before A. A occurs before B. (corresponding to the meaning of the operator >>)
-
-C causes the execution of A. C causes the execution of B.
-
-Comment: I expressed all in Present tense. This could be manipulated.
-
-We can accompany the above with 3 types of reasoning questions:
-
-Process reasoning (temporal, may exist a benchmark): 
-
-We anticipate (process related inference rules):
-
-PR1: a>>>c: a>>b, b>>c (transitive inference) - i.e., IF (a before b)=TRUE AND (b before c)=TRUE THEN (a before c)=TRUE
-
-PR2: not b>>a: a>>b (no symmetry inference) [relate to DAG and k-unfolding]
-
-PR3: a<<b: b>>a (antonym precedence negation inference)
-
-PR4: a>>a (no reflexivity) [no repetitions]
-
-PR5: a >>> b: exists c such that a>>>c, c>>b [***no manifestation in this pattern]
-
-PR6: a#b: not a>>b, not b>>a [***no manifestation in this pattern]
-
-PR7: a||b: a>>b, b>>a [***no manifestation in this pattern]
-
-In Will’s book, overall there is:
-
- > (directly follows in some trace), 
-
-→ (directly follows across all traces), 
-
-# (no direct transition in any of the traces), 
-
-|| (directly follows exists in both directions)
-
-In any process log, between any two activities a and b, there relation must be any one of the following (according to Wil’s book): a → b or b→ a or a||b or a#b.
-
-Meaning (more process rules?):
-
-XOR-split: a→ b and a→ c, and b#c implies IF a occured then either b or c will occur.
-
-XOR-join: a→ c and b→ c, and a#b implies IF either a or b occured then c will occur.
-
-AND-split: a→ b and a→ c, and b||c implies IF a occured then both b and c will occur.
-
-AND-join: a→ c and b→ c, and a||b implies IF c occured then both a and b must have occured before.
-
-
-
-QP1: Does C occur before B? A: Yes (deduced from PR1)
-
-QP2: Does B occur before C? A: No (deduced from PR2 deduced from (C occurs before B) = TRUE in Q1)
-
-QP3: Does A occur after C? A: Yes (deduced from PR3 deduced from (C occurs before A) = TRUE in phrase )
-
-QP4: Does B occur after C? A: Yes (deduced from PR3 deduced from (C occurs before B) = TRUE in Q1)
-
-QP5: Does C occur after A? A: No (deduced from PR2 since (C occurs before A) = TRUE in phrase )
-
-QP6: Does C occur after B? A: No (deduced from PR2 since (C occurs before B) = TRUE in Q1)
-
-QP7: Does A occur after B? A: No (deduced from PR3 since (B occurs before A) = FALSE deduced from PR2 )
-
-[add question touching on eventually follows]
-
-Additional possible questions for wider coverages:
+Additional possible questions for wider coverages of process perspective for situation 2: [not in paper]
 
 Q: Does C occur before A? A: Yes. (obvious to test the stated)
-
 Q: Does A occur before B? A: Yes. (obvious as stated)
-
 Q: Does A occur before C? A: No. (PR2)
-
 Q: Does B occur before A? A: No. (PR2)
-
 Q: Does B occur after A? A: Yes. (PR3)
-
 Q: Does A occur after C? A: Yes. (PR3)
-
 Q: Does C occur before B? A: Yes (PR1)
-
 Q: Does C occur before C? A: No (missing)
 
-Causal process reasoning:
+Causal rule extension and corresponding questions:
+* CR5: shorten(b): a>b, shorten(a)
 
-We anticipate: (causal inference rules):
+* QC7: If we shorten(A), will shorten(B) hold? A: No (same for extend)
+* QC8: If we shorten(B), will shorten(A) hold? A: No (same for extend)
+* QC9: If we shorten(C), will shorten(A) hold? A: Yes (same for extend)
+* QC10: If we shorten(C), will shorten(B) hold? A: Yes (same for extend)
 
-CR1: not a>c: c>a (no symmetry inference)
 
-CR2: a>c: a>b, b>c (transitive inference) [relevant only in the mediator pattern]
 
-CR3: a<b: b>a (cause vs because) 
-
-CR4: not b: a>b, not a [similarly a: a>b, b]
-
-Lior: I think there is also an issue with close-world assumption. i.e., as long as we don’t know (not implied from our facts) that (a>b)=TRUE, it is assumed that (a>b)=FALSE.
-
-[move the below on intervention into causal:]
-
-We may define a function (temporal intervention) shorten(x) such that x.end_time > shorten(x).end_time (e.g., allocating more resources to x) - similarly for extend(x), halt(x), delay(x), … and any other temporal intervention on execution time of x.
-
-CR5: shorten(b): a>b, shorten(a)
-
-[susceptible to predicate generalization over any type of temporal intervention. Our current intuition is that this could be generalized]
-
-QC1: Does A cause the execution of C? A: No (CR1)
-
-QC2: Does B cause the execution of C? A: No (CR1)
-
-QC3: Does A execute because of C? A: Yes (CR3)
-
-QC4: Does B execute because of C? A: Yes (CR3)
-
-QC5: If C doesn’t execute, will A ever execute? A: No (CR4)
-
-QC6: If C doesn’t execute, will B ever execute? A: No (CR4)
-
-[extend the phrase (may be covered in Mediator) with A>D, and add the question:Q: Does C cause D? A: Yes]
-
-QC7: If we shorten(A), will shorten(B) hold? A: No (same for extend)
-
-QC8: If we shorten(B), will shorten(A) hold? A: No (same for extend)
-
-QC9: If we shorten(C), will shorten(A) hold? A: Yes (same for extend)
-
-QC10: If we shorten(C), will shorten(B) hold? A: Yes (same for extend)
-
-Combined process and causal reasoning:
-
-We anticipate (causal and process inference rules):
-
-PCR1: a>>b: a>b (i.e., IF (a causes b)=TRUE THEN (a precedes b)=TRUE)
-
-PCR2: not b>a: a>>b (i.e., IF (a precedes b)=TRUE THEN (b causes a)=FALSE)
-
-Process: C>>A>>B
-
-Causal: C>A; C>B
-
-[ consider dropping - Lior Q: do we need also to make the discrepancy itself as (incorrect inference rules?) e.g., not a>b: c>a, c>b, a>>b ]
-
-QPC1: Does A cause the execution of B? A: No (because we don’t know according to close world assumption)
-
-QPC2: Does B cause the execution of A? A: No (because we don’t know, and A>>B implies not B>A)
-
-Next steps:
-
-Use LLM to see how it answers to (a set of X) questions as phrased in the above (with the phrase template given in the context). Comapare Merlinite to openAI. [domain agnostic test]
-
-Use LLM to instantiate the phrase and the questions to concrete problem domain statements. Measure its performance. check with Mixtral instruct 8x 7b
-
-Extend phrases and related questions for Collider and Mediator patterns. Add templates also for no discrepancy.
-
-Use LLM to train (with answers), and measure its performance.
 
 Test 1 (step 1):
 
