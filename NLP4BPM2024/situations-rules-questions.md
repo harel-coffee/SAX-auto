@@ -111,10 +111,10 @@
 Same as in $\mathcal{R}_1$ and $\mathcal{R}_2$.
 #### Combined: (possible extension if we add $||$ support in process)
 * PCR1: $A||B \Leftarrow (A\rightarrow C) \land (B\rightarrow C) \land ((A\xrightarrow{C}C) \lor (B\xrightarrow{C}C))$ [added if we extend to support || in the process, forces a AND-join similar to forcing AND-split in the confounder case for the non discrepancy cases]
->* If we know that both A>C and B>C, it may imply that A||B on the process side.
->* If say only A>C and not B>C, it would still require that A||B, otherwise B>>C becomes blocked if A doesn’t execute (being the cause for C).
->* Similarly, if say only B>C and not A>C, it implies A||B, otherwise A>>C becomes blocked.
->* Finally, an XOR-join is only possible if neither A or B cause C (unless A>C implies causes sometimes which we don’t consider at this stage). 
+>* If we know that both $A\xrightarrow{C}C$ and $B\xrightarrow{C}C$, it may imply that $A||B$ on the process side.
+>* If only $A\xrightarrow{C}C$ and not $B\xrightarrow{C}C$, it would still require that $A||B$, otherwise $B\rightarrow C$ becomes blocked if $A$ doesn’t execute (being the cause for $C$).
+>* Similarly, if only $B\xrightarrow{C}C$ and $\lnot (A\xrightarrow{C}C)$, it implies $A||B$, otherwise $A\rightarrow C$ becomes blocked.
+>* Finally, an XOR-join is only possible if neither $A$ or $B$ cause $C$ (unless $A\xrightarrow{C}C$ implies causes sometimes which we don’t consider at this stage). 
 
 ### Questions $\mathcal{Q}_3$
 #### Process:
