@@ -133,21 +133,12 @@ None added.
 * Process: $A\rightarrow B\rightarrow C$ (or $B\rightarrow A\rightarrow C$)
 * Causal: $A\xrightarrow{C}C, B\xrightarrow{C}C$
 
-patterns unfolding from discrepancy (collider):
-
-Discrepancy: (collider)
-
-Process: A>>B>>C  (or B>>A>>C)
-
-Causal: A>C; B>C 
-
-Phrase templates (knowledge facts reflective of the above discrepancy pattern): 
-
-A, B, and C are activities in some process.
-
-A occurs before B. B occurs before C.
-
-A causes the execution of C. B causes the execution of C.
+### Situation Phrases $\mathcal{S}_4$
+* A, B, and C are activities in some process.
+#### Process: 
+* A occurs before B. B occurs before C.
+#### Causal: 
+* A causes the execution of C. B causes the execution of C.
 
 Process reasoning (temporal): 
 
