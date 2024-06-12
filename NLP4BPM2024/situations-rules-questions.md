@@ -179,9 +179,9 @@ None added.
 
 ## Situation 2
 Additional rules not manifested in the process perspective:
-* PR: $a \rightarrow\rightarrow b \Leftarrow (a\rightarrow\rightarrow c) \land (c\rightarrow b)$ [***we consider eventually follows and directly follows as occurring after (followed by)]
-* PR: a#b: not a>>b, not b>>a [***no manifestation in this pattern]
-* PR: a||b: a>>b, b>>a [***no manifestation in this pattern]
+* PR: $A \rightarrow\rightarrow B \Leftarrow (A\rightarrow\rightarrow C) \land (C\rightarrow B)$ [***we consider eventually follows and directly follows as occurring after (followed by)]
+* PR: $A$ # $B \Leftarrow \lnot (A\rightarrow B) \land \lnot (B\rightarrow A)$ [***no manifestation in this pattern]
+* PR: $A||B \Leftarrow (A\rightarrow B) \land (B\rightarrow A)$ [***no manifestation in this pattern]
 
 Additional possible questions for wider coverages of process perspective for situation 2: [not in paper]
 
@@ -195,7 +195,7 @@ Additional possible questions for wider coverages of process perspective for sit
 * Q: Does C occur before C? A: No (missing)
 
 Causal rule extension and corresponding questions: [presented as an extension in the paper]
-* CR5: shorten(b): a>b, shorten(a)
+* CR5: is_shortened($B$) $\Leftarrow (A\xrightarrow{C}B) \land$ is_shortened($A$)
 
 * QC7: If we shorten(A), will shorten(B) hold? A: No (same for extend)
 * QC8: If we shorten(B), will shorten(A) hold? A: No (same for extend)
