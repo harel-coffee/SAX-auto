@@ -139,22 +139,17 @@ None added.
 * A occurs before B. B occurs before C.
 #### Causal: 
 * A causes the execution of C. B causes the execution of C.
-
-Process reasoning (temporal): 
-
-The same as in the discrepency case for a confounder.
-
-Causal process reasoning: 
-
-w.r.t. CR4: not b: a>b, not a, here also, it may be interesting
-
-QC1: If A doesn’t execute, will C ever execute? A: No (CR4)
-
-QC2: If B doesn’t execute, will C ever execute? A: No (CR4)
-
-Combined process and causal process reasoning:
-
-Since A>>B, such a relation may be deceiving, hence motovating two questions:
+### Rules $\mathcal{R}_4$
+Same as in $\mathcal{R}_1$ and $\mathcal{R}_2$.
+### Questions $\mathcal{Q}_4$
+#### Process:
+The same as in the discrepancy case for a confounder.
+#### Causal:
+Here also, may be interesting w.r.t. CR4 (see situation #2):
+* QC1: If A doesn’t execute, will C ever execute? A: No (CR4)
+* QC2: If B doesn’t execute, will C ever execute? A: No (CR4)
+#### Combined:
+Since $A\rightarrow B$, such a relation may be deceiving, hence motivating two questions:
 
 QCP1: Does A cause the execution of B? A: No (close world assumption)
 
