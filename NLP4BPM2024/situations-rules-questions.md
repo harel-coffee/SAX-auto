@@ -154,58 +154,26 @@ Since $A\rightarrow B$ ( and $\lnot (A\xrightarrow{C}B)$ ), such a relation may 
 * QCP2: Does B cause the execution of A? A: No (both close world and also entailment from A>>B)
 
 ## Situation 5: Mediator
-* P: A>B; B>C
-* C: A>B; B>C
-
+* Process: $A\rightarrow B\rightarrow C$
+* Causal: $A\xrightarrow{C}B\xrightarrow{C}C$
+### Situation Phrases $\mathcal{S}_5$
+* A, B, and C are activities in some process.
+#### Process: 
+* A occurs before B. B occurs before C.
+#### Causal: 
+* A causes the execution of B. B causes the execution of C.
 patterns unfolding from discrepancy (mediator): 
-
-Discrepancy: (mediator)
-
-Process: A>>M; M>>B 
-
-Causal:  A>B
-
-?
-
-Process: A>>B
-
-Causal: A>M>B;
-
-process reasoning:
-
+### Rules $\mathcal{R}_5$
+None added. Same as in $\mathcal{R}_1$ and $\mathcal{R}_2$.
+### Questions $\mathcal{Q}_4$
+#### Process:
 Same as above. Nothing added.
-
-causal reasoning:
-
-QC1: If A doesn’t execute, will B execute? A: No. (CR4)
-
-process and causal reasoning:
-
-QPC1: If M doesn’t execute and A executes, will B execute? A: Yes. (???)
-
-patterns unfolding from no discrepancy (mediator): 
-
-No Discrepancy: (mediator)
-
-Process: A>>M; M>>B; 
-
-Causal: A>M>B; 
-
-process reasoning:
-
-Same as above. Nothing added.
-
-causal reasoning:
-
-QC1: If M doesn’t execute, will B execute? A: No. 
-
-QC2: If A doesn’t execute, will B execute? A: No. 
-
-QC3: Does A cause the execution of B? A: Yes (CR2 transitive)
-
-process and causal reasoning:
-
-Nothing added.
+#### Causal: 
+* QC1: If B doesn’t execute, will C execute? A: No. 
+* QC2: If A doesn’t execute, will C execute? A: No. 
+* QC3: Does A cause the execution of C? A: Yes (CR2 transitive)
+#### Combined:
+None added.
 
 # Work in progress
 
@@ -233,3 +201,8 @@ Causal rule extension and corresponding questions:
 * QC8: If we shorten(B), will shorten(A) hold? A: No (same for extend)
 * QC9: If we shorten(C), will shorten(A) hold? A: Yes (same for extend)
 * QC10: If we shorten(C), will shorten(B) hold? A: Yes (same for extend)
+
+## Situation 5
+Consider the special case where there is also a direct causal relation $A\xrightarrow{C}C$, implying the
+even if $B$ doesn't execute, $C$ is still caused by $A$ (i.e., $B$ is a moderator).
+i.e., QPC: If B doesn’t execute and A executes, will C execute? A: Yes.
