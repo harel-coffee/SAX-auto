@@ -179,22 +179,22 @@ None added.
 
 ## Situation 2
 Additional rules not manifested in the process perspective:
-PR: a >>> b: exists c such that a>>>c, c>>b [***no manifestation in this pattern]
-PR: a#b: not a>>b, not b>>a [***no manifestation in this pattern]
-PR: a||b: a>>b, b>>a [***no manifestation in this pattern]
+* PR: $a \rightarrow\rightarrow b \Leftarrow (a\rightarrow\rightarrow c) \land (c\rightarrow b)$ [***we consider eventually follows and directly follows as occurring after (followed by)]
+* PR: a#b: not a>>b, not b>>a [***no manifestation in this pattern]
+* PR: a||b: a>>b, b>>a [***no manifestation in this pattern]
 
 Additional possible questions for wider coverages of process perspective for situation 2: [not in paper]
 
-Q: Does C occur before A? A: Yes. (obvious to test the stated)
-Q: Does A occur before B? A: Yes. (obvious as stated)
-Q: Does A occur before C? A: No. (PR2)
-Q: Does B occur before A? A: No. (PR2)
-Q: Does B occur after A? A: Yes. (PR3)
-Q: Does A occur after C? A: Yes. (PR3)
-Q: Does C occur before B? A: Yes (PR1)
-Q: Does C occur before C? A: No (missing)
+* Q: Does C occur before A? A: Yes. (obvious to test the stated)
+* Q: Does A occur before B? A: Yes. (obvious as stated)
+* Q: Does A occur before C? A: No. (PR2)
+* Q: Does B occur before A? A: No. (PR2)
+* Q: Does B occur after A? A: Yes. (PR3)
+* Q: Does A occur after C? A: Yes. (PR3)
+* Q: Does C occur before B? A: Yes (PR1)
+* Q: Does C occur before C? A: No (missing)
 
-Causal rule extension and corresponding questions:
+Causal rule extension and corresponding questions: [presented as an extension in the paper]
 * CR5: shorten(b): a>b, shorten(a)
 
 * QC7: If we shorten(A), will shorten(B) hold? A: No (same for extend)
