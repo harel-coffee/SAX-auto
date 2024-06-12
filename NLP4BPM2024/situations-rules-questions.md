@@ -122,6 +122,7 @@ Same as in $\mathcal{R}_1$ and $\mathcal{R}_2$.
 * QP2: Does B occur before A? A. No (Similarly in the opposite direction, same argumentation).
 
 #### Causal:
+None added.
 
 #### Combined: (w.r.t possible extension if we add $||$ support in process)
 * QPC1: Does A always occur before B? A. No. (PCR1)
@@ -129,8 +130,8 @@ Same as in $\mathcal{R}_1$ and $\mathcal{R}_2$.
 * QPC3: Does A and B occur in parallel? A. Yes. (PCR1)
 
 ## Situation 4: Collider with discrepancy
-* P: A>B>C (or B>A>C)
-* C: A>C; B>C
+* Process: $A\rightarrow B\rightarrow C$ (or $B\rightarrow A\rightarrow C$)
+* Causal: $A\xrightarrow{C}C, B\xrightarrow{C}C$
 
 patterns unfolding from discrepancy (collider):
 
