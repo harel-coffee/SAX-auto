@@ -149,11 +149,9 @@ Here also, may be interesting w.r.t. CR4 (see situation #2):
 * QC1: If A doesn’t execute, will C ever execute? A: No (CR4)
 * QC2: If B doesn’t execute, will C ever execute? A: No (CR4)
 #### Combined:
-Since $A\rightarrow B$, such a relation may be deceiving, hence motivating two questions:
-
-QCP1: Does A cause the execution of B? A: No (close world assumption)
-
-QCP2: Does B cause the execution of A? A: No (both close world and also entailment from A>>B)
+Since $A\rightarrow B$ ( and $\lnot (A\xrightarrow{C}B)$ ), such a relation may be deceiving, hence motivating two questions:
+* QCP1: Does A cause the execution of B? A: No (close world assumption)
+* QCP2: Does B cause the execution of A? A: No (both close world and also entailment from A>>B)
 
 ## Situation 5: Mediator
 * P: A>B; B>C
