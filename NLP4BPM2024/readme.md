@@ -6,7 +6,10 @@ The core of the benchmark consists of a composition of a set of BP<sup>C</sup>-r
 Reasoning on BP<sup>C</sup> is of crucial importance for process interventions and process improvement. Our benchmark could be used in one of two possible modalities: testing the performance of any target LLM and training an LLM to advance its capability to reason about BP<sup>C</sup>.
 
 Paper related resources:
-- Benchmark's seed: [situations, rules, and questions](https://github.com/IBM/SAX/blob/main/NLP4BPM2024/situations-rules-questions.md). 
+- Benchmark's seed: [situations, rules, and questions](https://github.com/IBM/SAX/blob/main/NLP4BPM2024/situations-rules-questions.md).
+- A series of [prompts](https://github.com/IBM/SAX/blob/main/NLP4BPM2024/prompts.md) employed.
+
+  
 ## How to cite
 Please consider citing [our paper](https://arxiv.org/abs/2406.05506) if you use code or ideas from this project:\
 Fabiana Fournier and Lior Limonad and Inna Skarbovsky, Towards a Benchmark for Causal Business Process Reasoning with LLMs, arXiv:2406.05506, 2024.
